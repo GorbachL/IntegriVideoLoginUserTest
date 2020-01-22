@@ -1,8 +1,8 @@
 package models;
 
 public class User {
-    String email;
-    String password;
+    private String email;
+    private String password;
 
     public User(String email, String password) {
         this.email = email;
