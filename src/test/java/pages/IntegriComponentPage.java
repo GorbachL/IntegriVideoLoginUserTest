@@ -7,4 +7,12 @@ public class IntegriComponentPage extends BasePage {
     public IntegriComponentPage(WebDriver driver) {
         super(driver);
     }
+
+    public void openPage() {
+
+    }
+
+    public void isPageOpened() {
+
+    }
 }

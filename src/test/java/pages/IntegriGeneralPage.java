@@ -16,4 +16,12 @@ public class IntegriGeneralPage extends BasePage {
     public IntegriGeneralPage(WebDriver driver) {
         super(driver);
     }
+
+    public void openPage() {
+
+    }
+
+    public void isPageOpened() {
+
+    }
 }
