@@ -19,7 +19,7 @@ public class FactoryPatternTest {
 
     @Test
     public void launchTestAutomationGuruTest() {
-        driverManager = DriverFactory.getManager(DriverType.FIREFOX);
+        driverManager = DriverFactory.getManager(DriverType.CHROME);
         driver = driverManager.getDriver();
         driver.get("http://testautomationguru.com");
         Assert.assertEquals("Vinsguru", driver.getTitle());
@@ -35,7 +35,7 @@ public class FactoryPatternTest {
 
     @Test
     public void launchYahooTest() {
-        driverManager = DriverFactory.getManager(DriverType.FIREFOX);
+        driverManager = DriverFactory.getManager(DriverType.CHROME);
         driver = driverManager.getDriver();
         driver.get("https://www.yahoo.com");
         Assert.assertEquals("Yahoo", driver.getTitle());

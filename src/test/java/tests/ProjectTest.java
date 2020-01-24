@@ -5,6 +5,7 @@ import models.User;
 import org.testng.annotations.Test;
 import pages.IntegriProjectsPage;
 import pages.LogInPage;
+import pages.NewProjectPage;
 
 import java.util.ArrayList;
 import java.util.Arrays;
