@@ -9,38 +9,40 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class SignUpPage extends BasePage {
+public class LogInPage extends BasePage {
 
     @FindBy(name = "email")
     WebElement emailInput;
     @FindBy(name = "password")
     WebElement passwordInput;
-    @FindBy(id = "signup-form")
-    WebElement signUpForm;
+    @FindBy(id = "login-form")
+    WebElement logInForm;
 
-    public SignUpPage(WebDriver driver) {
+    public LogInPage(WebDriver driver) {
         super(driver);
     }
 
     public void openPage() {
-        driver.get("https://dev.integrivideo.com/signup");
+        driver.get("https://dev.integrivideo.com/login");
         isPageOpened();
-        PageFactory.initElements(driver, SignUpPage.this);
+        PageFactory.initElements(driver, LogInPage.this);
     }
 
     public void isPageOpened() {
         try {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("signup-form")));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("login-form")));
         } catch (TimeoutException ex) {
             System.out.println("Page is not opened");
             throw new TimeoutException("Page is not opened");
         }
     }
 
-    public SignUpPage signUp(User user) {
+    public IntegriProjectsPage logIn(User user) {
         emailInput.sendKeys(user.getEmail());
         passwordInput.sendKeys(user.getPassword());
-        signUpForm.submit();
-        return this;
+        logInForm.submit();
+        IntegriProjectsPage projectsPage = new IntegriProjectsPage(driver);
+        projectsPage.isPageOpened();
+        return projectsPage;
     }
 }

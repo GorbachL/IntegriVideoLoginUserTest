@@ -10,7 +10,7 @@ public class SignUpTest extends BaseTest {
     public void signUp() {
         User user = new User("lenag@mailinator.com", "qwerty12345");
         new SignUpPage(driver)
-                .openPage()
-                .signUp(user);
+                .openPage();
+        new SignUpPage(driver).signUp(user);
     }
 }
