@@ -17,6 +17,8 @@ public class LogInPage extends BasePage {
     WebElement passwordInput;
     @FindBy(id = "login-form")
     WebElement logInForm;
+    @FindBy(className = "forgot")
+    WebElement forgotLink;
 
     public LogInPage(WebDriver driver) {
         super(driver);
@@ -37,12 +39,12 @@ public class LogInPage extends BasePage {
         }
     }
 
-    public IntegriProjectsPage logIn(User user) {
+    public IntegriProjectsPage login(User user) {
         emailInput.sendKeys(user.getEmail());
         passwordInput.sendKeys(user.getPassword());
         logInForm.submit();
-        IntegriProjectsPage projectsPage = new IntegriProjectsPage(driver);
-        projectsPage.isPageOpened();
-        return projectsPage;
+        IntegriProjectsPage projects = new IntegriProjectsPage(driver);
+        projects.isPageOpened();
+        return projects;
     }
 }
