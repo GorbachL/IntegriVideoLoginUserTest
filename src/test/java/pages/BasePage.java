@@ -16,9 +16,9 @@ abstract class BasePage {
         wait = new WebDriverWait(driver, 20);
     }
 
-    public abstract void openPage();
-
-    public abstract void isPageOpened();
+//    public abstract void openPage();
+//
+//    public abstract void isPageOpened();
 
     public void waitForVisibilityOfElements(By locator, String message, int timeout) {
         try {

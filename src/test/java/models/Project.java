@@ -4,30 +4,30 @@ import java.util.ArrayList;
 
 public class Project {
 
-    private String name;
-    private String description;
+    private String projectName;
+    private String projectDescription;
     private ArrayList<String> domains;
 
     public Project(String name, String description, ArrayList<String> domains) {
-        this.name = name;
-        this.description = description;
+        this.projectName = name;
+        this.projectDescription = description;
         this.domains = domains;
     }
 
-    public String getName() {
-        return name;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getProjectDescription() {
+        return projectDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setProjectDescription(String projectDescription) {
+        this.projectDescription = projectDescription;
     }
 
     public ArrayList<String> getDomains() {
