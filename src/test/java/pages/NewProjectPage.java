@@ -31,8 +31,8 @@ public class NewProjectPage extends BasePage {
     }
 
     public NewProjectPage fillInFields(Project project) {
-        driver.findElement(NAME).sendKeys(project.getName());
-        driver.findElement(DESCRIPTION).sendKeys(project.getDescription());
+        driver.findElement(NAME).sendKeys(project.getProjectName());
+        driver.findElement(DESCRIPTION).sendKeys(project.getProjectDescription());
         for (int i = 0; i < project.getDomains().size(); i++) {
             driver.findElements(DOMAINS_INPUT).get(i).sendKeys(project.getDomains().get(i));
         }

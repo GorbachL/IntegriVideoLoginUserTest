@@ -2,40 +2,40 @@ package models;
 
 public class Card {
 
-    private String number;
-    private String month;
-    private String year;
+    private String cardNumber;
+    private String cardMonth;
+    private String cardYear;
     private String cardHolder;
 
     public Card(String number, String month, String year, String cardHolder) {
-        this.number = number;
-        this.month = month;
-        this.year = year;
+        this.cardNumber = number;
+        this.cardMonth = month;
+        this.cardYear = year;
         this.cardHolder = cardHolder;
     }
 
-    public String getNumber() {
-        return number;
+    public String getCardNumber() {
+        return cardNumber;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
     }
 
-    public String getMonth() {
-        return month;
+    public String getCardMonth() {
+        return cardMonth;
     }
 
-    public void setMonth(String month) {
-        this.month = month;
+    public void setCardMonth(String cardMonth) {
+        this.cardMonth = cardMonth;
     }
 
-    public String getYear() {
-        return year;
+    public String getCardYear() {
+        return cardYear;
     }
 
-    public void setYear(String year) {
-        this.year = year;
+    public void setCardYear(String cardYear) {
+        this.cardYear = cardYear;
     }
 
     public String getCardHolder() {

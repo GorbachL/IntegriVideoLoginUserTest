@@ -37,11 +37,11 @@ public class LogInPage extends BasePage {
         }
     }
 
-    public IntegriProjectsPage logIn(User user) {
+    public ProjectsPage logIn(User user) {
         emailInput.sendKeys(user.getEmail());
         passwordInput.sendKeys(user.getPassword());
         logInForm.submit();
-        IntegriProjectsPage projectsPage = new IntegriProjectsPage(driver);
+        ProjectsPage projectsPage = new ProjectsPage(driver);
         projectsPage.isPageOpened();
         return projectsPage;
     }
